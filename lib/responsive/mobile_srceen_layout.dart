@@ -29,9 +29,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
               unselectedLabelColor: Colors.grey,
               indicatorColor: blueColor,
               tabs: [
-                Tab(
-                  text: "ALL",
-                ),
+                Tab(text: "ALL"),
                 Tab(
                   text: "IMAGES",
                 ),
