@@ -92,11 +92,6 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                       SizedBox(
                         height: 20,
                       ),
-                      SerachButtons(),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TranslationButtons(),
                     ],
                   ),
                   MobileFooter(),

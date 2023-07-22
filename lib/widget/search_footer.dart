@@ -6,12 +6,13 @@ class SearchFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Column(
       children: [
         Container(
           color: footerColor,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 150,
+          padding: EdgeInsets.symmetric(
+            horizontal: size.width <= 768 ? 10 : 150,
             vertical: 15,
           ),
           child: Row(
@@ -54,57 +55,59 @@ class SearchFooter extends StatelessWidget {
                 height: 9,
                 color: Colors.black26,
               ),
-              Container(
-                color: footerColor,
-                padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: const Row(
-                  children: [
-                    Text(
-                      'Help',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'Send Feedback',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'Privacy',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'Terms',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
-        )
+        ),
+        Container(
+          color: footerColor,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 50,
+          ),
+          child: const Row(
+            children: [
+              Text(
+                'Help',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                'Send Feedback',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                'Privacy',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                'Terms',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
