@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/colors.dart';
+import 'package:flutter_application_1/services/api_service.dart';
 import 'package:flutter_application_1/widget/search_footer.dart';
 import 'package:flutter_application_1/widget/search_header.dart';
 import 'package:flutter_application_1/widget/search_tabs.dart';
@@ -28,8 +29,28 @@ class SearchScreen extends StatelessWidget {
               thickness: 0.3,
             ),
             // search result
+            FutureBuilder(
+              future: ApiService().fetchData(queryTerm: 'Vipin'),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                if (snapshot.hasData) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(left: 150, top: 12),
+                        child: Text(
+                            'About ${snapshot.data?['searchInformation']['formattedTotalResults']} results ${snapshot.data?['searchInformation']['formattedSearchTime']} seconds'),
+                      )
+                    ],
+                  );
+                }
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
 
-            
             //pagination
             SizedBox(
               width: double.infinity,

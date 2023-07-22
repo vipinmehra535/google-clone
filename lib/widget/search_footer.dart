@@ -36,6 +36,7 @@ class SearchFooter extends StatelessWidget {
               ),
               const Icon(
                 Icons.circle,
+                size: 10,
                 color: Color(0xff70757a),
               ),
               const SizedBox(
