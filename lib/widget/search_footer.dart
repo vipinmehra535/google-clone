@@ -61,7 +61,7 @@ class SearchFooter extends StatelessWidget {
         Container(
           color: footerColor,
           padding: const EdgeInsets.symmetric(
-            horizontal: 50,
+            horizontal: 10,
           ),
           child: const Row(
             children: [

@@ -40,7 +40,9 @@ class SearchHeader extends StatelessWidget {
               border: Border.all(color: searchColor),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15.0,
+              ),
               child: Container(
                 constraints: const BoxConstraints(
                   maxWidth: 150,
@@ -56,32 +58,35 @@ class SearchHeader extends StatelessWidget {
                       ),
                     );
                   },
-                  style: const TextStyle(fontSize: 16),
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
                   textAlignVertical: TextAlignVertical.center,
                   decoration: InputDecoration(
-                      focusedBorder: InputBorder.none,
-                      disabledBorder: InputBorder.none,
-                      focusedErrorBorder: InputBorder.none,
-                      errorBorder: InputBorder.none,
-                      enabledBorder: InputBorder.none,
-                      suffixIcon: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SvgPicture.asset(
-                            "assets/images/mic-icon.svg",
-                            height: 20,
-                            width: 20,
-                          ),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          const Icon(
-                            Icons.search,
-                            color: blueColor,
-                          )
-                        ],
-                      )),
+                    focusedBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    focusedErrorBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    suffixIcon: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/images/mic-icon.svg",
+                          height: 20,
+                          width: 20,
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        const Icon(
+                          Icons.search,
+                          color: blueColor,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
