@@ -30,7 +30,7 @@ class WebFooter extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                FooterText(title: 'Privacy'),
+                FooterText(title: 'Privacy',),
                 SizedBox(width: 10),
                 FooterText(title: 'Terms'),
                 SizedBox(width: 10),
