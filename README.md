@@ -1,4 +1,4 @@
-# Google_clone
+# Google Clone
 
 A completely Responsive Google App- Works on Android, iOS & Web! 
 
